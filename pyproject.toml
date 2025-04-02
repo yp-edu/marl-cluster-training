@@ -1,0 +1,7 @@
+[project]
+name = "marl-cluster-training"
+version = "0.1.0"
+description = "MARL cluster training"
+readme = "README.md"
+requires-python = ">=3.11.10"
+dependencies = []
