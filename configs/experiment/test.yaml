@@ -1,0 +1,5 @@
+on_policy_collected_frames_per_batch: 1000
+off_policy_collected_frames_per_batch: 1000
+evaluation_interval: 5000
+max_n_iters: 15
+save_folder: "results/experiments/"

@@ -1,0 +1,37 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Script Multiwalker IPPO",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "scripts.experiments.multiwalker_ippo",
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },
+        {
+            "name": "Script Multiwalker MAPPO",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "scripts.experiments.multiwalker_mappo",
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },
+        {
+            "name": "Script Multiwalker QMIX",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "scripts.experiments.multiwalker_qmix",
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },
+        {
+            "name": "Script Kaz",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "scripts.kaz",
+            "console": "integratedTerminal",
+            "justMyCode": false
+        }
+    ]
+}

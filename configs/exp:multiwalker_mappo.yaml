@@ -1,0 +1,13 @@
+defaults:
+  - experiment: debug
+  - algorithm: mappo/default
+  - task: multiwalker/default
+  - model: mlp/default
+  - model@critic_model: mlp/default
+  - _self_
+
+clean_folder: false
+train: true
+plot: true
+interactive: true
+seed: 0

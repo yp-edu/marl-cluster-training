@@ -1,0 +1,19 @@
+defaults:
+  - experiment: debug
+  - algorithm@alg1: ippo/default
+  - algorithm@alg2: mappo/default
+  - task@task1: multiwalker/default
+  - model: mlp/default
+  - model@critic_model: mlp/default
+  - _self_
+
+experiment:
+  save_folder: "results/benchmarks/multiwalker/"
+
+clean_folder: false
+train: true
+plot: true
+interactive: true
+seeds:
+  - 0
+  - 1
