@@ -12,13 +12,12 @@ import hydra
 from omegaconf import DictConfig
 import warnings
 
-from scripts.utils import validate_benchmark, plot_experiments, make_clean_folder, get_experiment_json_file
+from scripts.utils import load_benchmark, plot_experiments, make_clean_folder, get_experiment_json_file
 
 
 @hydra.main(version_base=None, config_path="../../configs", config_name="bench:multiwalker")
 def main(cfg: DictConfig):
-    print(cfg)
-    benchmark = validate_benchmark(cfg, ["multiwalker"], ["ippo", "mappo", "qmix"], ["mlp"])
+    benchmark = load_benchmark(cfg)
     if cfg.clean_folder:
         make_clean_folder(benchmark.experiment_config.save_folder)
     if cfg.train:

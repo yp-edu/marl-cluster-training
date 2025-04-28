@@ -1,9 +1,7 @@
 defaults:
   - experiment: base_experiment
-  - algorithm@algs.a1: ippo
-  - algorithm@algs.a2: mappo
-  - algorithm@algs.a3: qmix
-  - task@tasks.t1: pettingzoo/multiwalker
+  - algorithm: ???
+  - task: ???
   - model: layers/mlp
   - model@critic_model: layers/mlp
   - _self_
@@ -13,12 +11,10 @@ hydra:
     - pkg://benchmarl/conf
 
 experiment:
-  save_folder: "results/benchmarks/multiwalker/"
+  save_folder: "results/experiments"
 
 clean_folder: false
 train: true
 plot: true
 interactive: true
-seeds:
-  - 0
-  - 1
+seed: 0

@@ -2,34 +2,28 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Script Multiwalker IPPO",
+            "name": "Experiment Multiwalker Shared",
             "type": "debugpy",
             "request": "launch",
-            "module": "scripts.experiments.multiwalker_ippo",
+            "module": "scripts.experiments.run_local",
             "console": "integratedTerminal",
-            "justMyCode": false
+            "justMyCode": false,
+            "args": ["algorithm=ippo", "task=multiwalker/shared", "experiment=no_log"]
         },
         {
-            "name": "Script Multiwalker MAPPO",
+            "name": "Experiment Kaz Default",
             "type": "debugpy",
             "request": "launch",
-            "module": "scripts.experiments.multiwalker_mappo",
+            "module": "scripts.experiments.run_local",
             "console": "integratedTerminal",
-            "justMyCode": false
+            "justMyCode": false,
+            "args": ["algorithm=ippo", "task=kaz/default", "experiment=no_log"]
         },
         {
-            "name": "Script Multiwalker QMIX",
+            "name": "Benchmark Multiwalker",
             "type": "debugpy",
             "request": "launch",
-            "module": "scripts.experiments.multiwalker_qmix",
-            "console": "integratedTerminal",
-            "justMyCode": false
-        },
-        {
-            "name": "Script Kaz",
-            "type": "debugpy",
-            "request": "launch",
-            "module": "scripts.kaz",
+            "module": "scripts.benchmarks.multiwalker",
             "console": "integratedTerminal",
             "justMyCode": false
         }
