@@ -24,6 +24,7 @@ scripts = [
     "id-marl-eval>=0.0.4",
     "matplotlib>=3.10.1",
     "pettingzoo[butterfly,sisl]>=1.24.3",
+    "wandb>=0.19.10",
 ]
 
 [build]
@@ -34,6 +35,7 @@ default-groups = ["dev", "scripts"]
 
 [tool.uv.sources]
 id-marl-eval = { git = "https://github.com/instadeepai/marl-eval.git" }
+benchmarl = { git = "https://github.com/facebookresearch/BenchMARL" }
 
 [tool.ruff]
 line-length = 119
