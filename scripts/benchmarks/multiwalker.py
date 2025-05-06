@@ -30,7 +30,6 @@ def main(cfg: DictConfig):
         plot_experiments(
             experiments_json_files,
             "pettingzoo",
-            "multiwalker",
             [["ippo", "mappo"]],
             interactive=cfg.interactive,
             save_folder=benchmark.experiment_config.save_folder,

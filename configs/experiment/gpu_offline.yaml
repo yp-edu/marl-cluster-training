@@ -1,0 +1,6 @@
+defaults:
+  - gpu
+  - _self_
+
+wandb_extra_kwargs:
+  offline: false

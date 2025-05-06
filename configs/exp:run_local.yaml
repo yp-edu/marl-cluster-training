@@ -9,9 +9,16 @@ defaults:
 hydra:
   searchpath:
     - pkg://benchmarl/conf
+  sweep:
+    dir: results/hydra/${hydra.job.name}-sweep/${now:%Y-%m-%d_%H-%M-%S}
+  run:
+    dir: results/hydra/${hydra.job.name}-run/${now:%Y-%m-%d_%H-%M-%S}
 
 experiment:
   save_folder: "results/experiments"
+  wandb_extra_kwargs:
+    project: "marl-cluster-training"
+    entity: "yp-edu"
 
 clean_folder: false
 train: true

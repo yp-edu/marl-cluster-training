@@ -1,0 +1,11 @@
+defaults:
+  - base_experiment
+  - _self_
+
+# The device for collection (e.g. cuda)
+sampling_device: "cuda"
+# The device for training (e.g. cuda)
+train_device: "cuda"
+# The device for the replay buffer of off-policy algorithms (e.g. cuda).
+# Use "disk" to store it on disk (in the experiment save_folder)
+buffer_device: "cuda"
