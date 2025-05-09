@@ -1,0 +1,6 @@
+defaults:
+  - pettingzoo/multiwalker # not working, see https://github.com/facebookresearch/hydra/issues/3060
+  - _self_
+
+# whether reward is distributed among all agents or allocated individually
+shared_reward: True
