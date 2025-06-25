@@ -1,0 +1,10 @@
+defaults:
+  - layers@layers.l1: mlp
+  - _self_
+
+intermediate_sizes: []
+
+layers:
+  l1:
+    activation_class: torch.nn.ReLU
+    num_cells: [256, 256, 256]

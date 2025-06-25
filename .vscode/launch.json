@@ -17,7 +17,7 @@
             "module": "scripts.experiments.run_local",
             "console": "integratedTerminal",
             "justMyCode": false,
-            "args": ["algorithm=ippo", "task=kaz/default", "experiment=no_log", "model=mlp_relu_1"]
+            "args": ["algorithm=ippo", "task=kaz/default", "experiment=no_log", "model=layers/extra_mlp"]
         },
         {
             "name": "Benchmark Multiwalker",

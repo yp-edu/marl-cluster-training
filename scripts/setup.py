@@ -2,9 +2,11 @@ from hydra.core.config_store import ConfigStore
 
 from benchmarl.environments import PettingZooTask
 from benchmarl.environments import task_config_registry
+from benchmarl.models import model_config_registry
 
 from scripts.kaz.task import PettingZooKazTask
 from scripts.kaz.config import KazTaskConfig
+from scripts.extra_mlp import ExtraMlpConfig
 
 
 def setup_custom_tasks(main):
@@ -20,5 +22,7 @@ def setup_custom_tasks(main):
     task_config_registry["multiwalker/shared_composed"] = (
         PettingZooTask.MULTIWALKER
     )  # not working, see https://github.com/facebookresearch/hydra/issues/3060
+
+    model_config_registry["extra_mlp"] = ExtraMlpConfig
 
     return main
