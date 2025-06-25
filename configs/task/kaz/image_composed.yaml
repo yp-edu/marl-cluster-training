@@ -1,0 +1,5 @@
+defaults:
+  - kaz/default # not working, see https://github.com/facebookresearch/hydra/issues/3060
+  - _self_
+
+vector_state: false

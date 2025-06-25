@@ -17,7 +17,8 @@ class PettingZooKazClass(PettingZooClass):
 class PettingZooKazTask(Task):
     """Enum for PettingZoo tasks."""
 
-    KAZ = None
+    DEFAULT = None
+    IMAGE = None
 
     @staticmethod
     def associated_class():

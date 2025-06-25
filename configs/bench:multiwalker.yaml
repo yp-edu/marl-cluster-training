@@ -15,6 +15,7 @@ hydra:
 
 experiment:
   save_folder: "results/benchmarks/multiwalker/"
+  project_name: "marl-cluster-training"
   wandb_extra_kwargs:
     project: "marl-cluster-training"
     entity: "yp-edu"

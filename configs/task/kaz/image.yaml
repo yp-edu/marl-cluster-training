@@ -13,6 +13,6 @@ killable_archers: true
 pad_observation: true
 line_death: false
 max_cycles: 900
-vector_state: true
+vector_state: false
 use_typemasks: false
 sequence_space: false

@@ -8,7 +8,7 @@
             "module": "scripts.experiments.run_local",
             "console": "integratedTerminal",
             "justMyCode": false,
-            "args": ["algorithm=ippo", "task=multiwalker/shared", "experiment=no_log"]
+            "args": ["algorithm=ippo", "task=multiwalker/shared", "experiment=no_log", "model=mlp_relu_1"]
         },
         {
             "name": "Experiment Kaz Default",
@@ -17,7 +17,7 @@
             "module": "scripts.experiments.run_local",
             "console": "integratedTerminal",
             "justMyCode": false,
-            "args": ["algorithm=ippo", "task=kaz/default", "experiment=no_log"]
+            "args": ["algorithm=ippo", "task=kaz/default", "experiment=no_log", "model=mlp_relu_1"]
         },
         {
             "name": "Benchmark Multiwalker",

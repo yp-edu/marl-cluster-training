@@ -3,8 +3,9 @@ defaults:
   - algorithm: ???
   - task: ???
   - model: layers/mlp
-  - model@critic_model: layers/mlp
   - _self_
+
+critic_model: ${model}
 
 hydra:
   searchpath:
@@ -16,6 +17,7 @@ hydra:
 
 experiment:
   save_folder: "results/experiments"
+  project_name: "marl-cluster-training"
   wandb_extra_kwargs:
     project: "marl-cluster-training"
     entity: "yp-edu"
@@ -23,5 +25,5 @@ experiment:
 clean_folder: false
 train: true
 plot: true
-interactive: true
+interactive: false
 seed: 0
