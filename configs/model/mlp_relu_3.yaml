@@ -1,0 +1,7 @@
+defaults:
+  - layers@layers.l1: mlp_relu
+  - layers@layers.l2: mlp_relu
+  - layers@layers.l3: mlp_relu
+  - _self_
+
+intermediate_sizes: [256, 256]

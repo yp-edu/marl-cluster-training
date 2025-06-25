@@ -1,0 +1,5 @@
+defaults:
+  - mlp
+  - _self_
+
+activation_class: torch.nn.ReLU
