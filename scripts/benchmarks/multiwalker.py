@@ -4,7 +4,7 @@ Run a benchmark for the multiwalker task.
 Run with:
 
 ```bash
-uv run python -m scripts.benchmarks.multiwalker
+uv run -m scripts.benchmarks.multiwalker
 ```
 """
 

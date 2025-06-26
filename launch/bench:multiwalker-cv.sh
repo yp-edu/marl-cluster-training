@@ -11,4 +11,4 @@
 #SBATCH --error=results/slurm/%x-%j.err
 
 module purge
-uv run --no-sync python -m scripts.benchmarks.multiwalker
+uv run --no-sync -m scripts.benchmarks.multiwalker

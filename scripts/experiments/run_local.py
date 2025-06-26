@@ -4,7 +4,7 @@ Run a single experiment locally.
 Run with:
 
 ```bash
-uv run python -m scripts.experiments.run_local algorithm=ippo task=multiwalker/shared
+uv run -m scripts.experiments.run_local algorithm=ippo task=multiwalker/shared
 ```
 """
 
