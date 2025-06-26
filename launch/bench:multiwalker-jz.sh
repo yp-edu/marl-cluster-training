@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH --job-name=loss-jz
+#SBATCH --job-name=bench:multiwalker-jz
 #SBATCH --nodes=1
 #SBATCH --gpus=1
 #SBATCH --time=60
