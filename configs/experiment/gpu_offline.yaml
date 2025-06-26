@@ -3,4 +3,4 @@ defaults:
   - _self_
 
 wandb_extra_kwargs:
-  offline: false
+  offline: true
