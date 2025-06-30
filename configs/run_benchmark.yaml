@@ -1,8 +1,7 @@
 defaults:
   - experiment: base_experiment
-  - algorithm@algs.a1: ippo
-  - algorithm@algs.a2: mappo
-  - task@tasks.t1: pettingzoo/multiwalker
+  - algorithm@algs.a1: ???
+  - task@tasks.t1: ???
   - model: layers/mlp
   - model@critic_model: layers/mlp
   - _self_
@@ -14,7 +13,7 @@ hydra:
     dir: results/hydra/${hydra.job.name}-run/${now:%Y-%m-%d_%H-%M-%S}
 
 experiment:
-  save_folder: "results/benchmarks/multiwalker/"
+  save_folder: "results/benchmarks"
   project_name: "marl-cluster-training"
   wandb_extra_kwargs:
     project: "marl-cluster-training"
@@ -23,6 +22,7 @@ experiment:
 clean_folder: false
 train: true
 plot: true
+plot_environment: null
 interactive: true
 seeds:
   - 0

@@ -4,7 +4,11 @@ Run a single experiment locally.
 Run with:
 
 ```bash
-uv run -m scripts.experiments.run_local algorithm=ippo task=multiwalker/shared
+uv run -m scripts.run_experiment \
+    algorithm=ippo \
+    task=multiwalker/shared \
+    experiment=debug_no_log \
+    model=layers/mlp
 ```
 """
 
@@ -19,7 +23,7 @@ from scripts.setup import setup_custom_tasks
 
 
 @setup_custom_tasks
-@hydra.main(version_base=None, config_path="../../configs", config_name="exp:run_local")
+@hydra.main(version_base=None, config_path="../configs", config_name="run_experiment")
 def main(cfg: DictConfig):
     hydra_choices = HydraConfig.get().runtime.choices
     algorithm_name = hydra_choices.algorithm

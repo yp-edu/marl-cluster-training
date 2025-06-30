@@ -5,7 +5,7 @@
             "name": "Experiment Multiwalker Shared",
             "type": "debugpy",
             "request": "launch",
-            "module": "scripts.experiments.run_local",
+            "module": "scripts.run_experiment",
             "console": "integratedTerminal",
             "justMyCode": false,
             "args": ["algorithm=ippo", "task=multiwalker/shared", "experiment=no_log", "model=mlp_relu_1"]
@@ -14,7 +14,7 @@
             "name": "Experiment Kaz Default",
             "type": "debugpy",
             "request": "launch",
-            "module": "scripts.experiments.run_local",
+            "module": "scripts.run_experiment",
             "console": "integratedTerminal",
             "justMyCode": false,
             "args": ["algorithm=ippo", "task=kaz/default", "experiment=no_log", "model=layers/extra_mlp"]
@@ -23,9 +23,10 @@
             "name": "Benchmark Multiwalker",
             "type": "debugpy",
             "request": "launch",
-            "module": "scripts.benchmarks.multiwalker",
+            "module": "scripts.run_benchmark",
             "console": "integratedTerminal",
-            "justMyCode": false
+            "justMyCode": false,
+            "args": ["algorithm@algs.a1=ippo", "algorithm@algs.a2=mappo", "task@tasks.t1=pettingzoo/multiwalker"]
         }
     ]
 }
