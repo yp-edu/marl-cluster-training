@@ -8,7 +8,7 @@
             "module": "scripts.run_experiment",
             "console": "integratedTerminal",
             "justMyCode": false,
-            "args": ["algorithm=ippo", "task=multiwalker/shared", "experiment=no_log", "model=mlp_relu_1"]
+            "args": ["algorithm=ippo", "task=multiwalker/shared", "experiment=debug_no_log", "model=mlp_relu_1"]
         },
         {
             "name": "Experiment Kaz Default",
@@ -17,7 +17,7 @@
             "module": "scripts.run_experiment",
             "console": "integratedTerminal",
             "justMyCode": false,
-            "args": ["algorithm=ippo", "task=kaz/default", "experiment=no_log", "model=layers/extra_mlp"]
+            "args": ["algorithm=ippo", "task=kaz/default", "experiment=debug_no_log", "model=layers/extra_mlp"]
         },
         {
             "name": "Benchmark Multiwalker",
@@ -26,7 +26,7 @@
             "module": "scripts.run_benchmark",
             "console": "integratedTerminal",
             "justMyCode": false,
-            "args": ["algorithm@algs.a1=ippo", "algorithm@algs.a2=mappo", "task@tasks.t1=pettingzoo/multiwalker"]
+            "args": ["algorithm@algs.a1=ippo", "+algorithm@algs.a2=mappo", "task@tasks.t1=pettingzoo/multiwalker", "experiment=debug_no_log"]
         }
     ]
 }

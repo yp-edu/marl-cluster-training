@@ -44,7 +44,7 @@ def main(cfg: DictConfig):
         plot_experiments(
             experiments_json_files,
             cfg.plot_environment,
-            [[hydra_choices[f"algorithm@algs.{alg_alias}"] for alg_alias in benchmark.algorithm_configs.keys()]],
+            [[hydra_choices[f"algorithm@algs.{alg_alias}"] for alg_alias in cfg.algs.keys()]],
             interactive=cfg.interactive,
             save_folder=benchmark.experiment_config.save_folder,
         )
