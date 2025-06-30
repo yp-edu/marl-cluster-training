@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#SBATCH --job-name=bench:multiwalker-jz
+#SBATCH --job-name=exp:multiwalker-jz
 #SBATCH --nodes=1
 #SBATCH --gpus=1
 #SBATCH --time=1200
@@ -10,11 +10,9 @@
 #SBATCH --account=nwq@v100
 
 module purge
-uv run --no-sync -m scripts.benchmarks.multiwalker \
-    algorithm@algs.a1=ippo \
-    +algorithm@algs.a2=mappo \
-    task@tasks.t1=pettingzoo/multiwalker \
-    +task@tasks.t2=multiwalker/shared \
+uv run --no-sync -m scripts.run_experiment \
+    algorithm=ippo \
+    task=pettingzoo/multiwalker \
     train=true \
     plot=false \
     interactive=false \
