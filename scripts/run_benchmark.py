@@ -34,9 +34,11 @@ def main(cfg: DictConfig):
         make_clean_folder(benchmark.experiment_config.save_folder)
     if cfg.train:
         experiments_json_files = []
-        for experiment in benchmark.get_experiments():
-            experiments_json_files.append(get_experiment_json_file(experiment))
-            experiment.run()
+        for i, experiment in enumerate(benchmark.get_experiments()):
+            if cfg.run_specific_expirment is None or i == cfg.run_specific_expirment:
+                print(f"[INFO] Running experiment {i}")
+                experiments_json_files.append(get_experiment_json_file(experiment))
+                experiment.run()
 
     if cfg.plot:
         if cfg.plot_environment is None:
