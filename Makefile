@@ -17,4 +17,16 @@ tests:
 
 .PHONY: wandb-sync
 wandb-sync:
-	uv run --no-sync wandb sync --sync-all
+	uv run --no-sync wandb sync results/experiments/*/wandb/offline-run-*
+	uv run --no-sync wandb sync results/benchmarks/*/wandb/offline-run-*
+
+.PHONY: wandb-sync-and-clean
+wandb-sync-and-clean:
+	for d in results/experiments/*/wandb/offline-run-*; do \
+		uv run wandb sync --sync-all "$$d"; \
+		rm -r "$$d"; \
+	done
+	for d in results/benchmarks/*/wandb/offline-run-*; do \
+		uv run wandb sync --sync-all "$$d"; \
+		rm -r "$$d"; \
+	done
