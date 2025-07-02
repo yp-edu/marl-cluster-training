@@ -117,7 +117,7 @@ wheels = [
 [[package]]
 name = "benchmarl"
 version = "1.5.0"
-source = { git = "https://github.com/facebookresearch/BenchMARL#567acd93ee6a61d9cd8c0298a0ab19ab6728afa8" }
+source = { git = "https://github.com/Xmaster6y/BenchMARL?rev=custom#6bf300eb2e59e85256204c20efcb4c8bd1c0b09d" }
 dependencies = [
     { name = "av" },
     { name = "hydra-core" },
@@ -968,7 +968,7 @@ dev = [
     { name = "pytest-cov", specifier = ">=6.1.1" },
 ]
 scripts = [
-    { name = "benchmarl", git = "https://github.com/facebookresearch/BenchMARL" },
+    { name = "benchmarl", git = "https://github.com/Xmaster6y/BenchMARL?rev=custom" },
     { name = "hydra-core", specifier = ">=1.3.2" },
     { name = "id-marl-eval", git = "https://github.com/instadeepai/marl-eval.git" },
     { name = "loguru", specifier = ">=0.7.3" },

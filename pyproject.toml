@@ -36,7 +36,7 @@ default-groups = ["dev", "scripts"]
 
 [tool.uv.sources]
 id-marl-eval = { git = "https://github.com/instadeepai/marl-eval.git" }
-benchmarl = { git = "https://github.com/facebookresearch/BenchMARL" }
+benchmarl = { git = "https://github.com/Xmaster6y/BenchMARL", rev = "custom" }
 
 [tool.ruff]
 line-length = 119
