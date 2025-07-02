@@ -117,7 +117,7 @@ wheels = [
 [[package]]
 name = "benchmarl"
 version = "1.5.0"
-source = { git = "https://github.com/Xmaster6y/BenchMARL?rev=custom#6bf300eb2e59e85256204c20efcb4c8bd1c0b09d" }
+source = { git = "https://github.com/Xmaster6y/BenchMARL?rev=custom#467b92cce65a4642d0fbc6b8a842854f30deda46" }
 dependencies = [
     { name = "av" },
     { name = "hydra-core" },
