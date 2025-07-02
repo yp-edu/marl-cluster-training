@@ -1,23 +1,22 @@
 #!/bin/bash
 
-#SBATCH --job-name=bench:multiwalker-jz
+#SBATCH --job-name=exp:multiwalker-jz-a100
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --gpus=1
-#SBATCH -C v100-16g
-#SBATCH --cpus-per-task=10
+#SBATCH -C a100
+#SBATCH --cpus-per-task=8
 #SBATCH --time=20:00:00
 #SBATCH --mail-type=ALL
 #SBATCH --output=results/slurm/%x-%j.out
 #SBATCH --error=results/slurm/%x-%j.err
-#SBATCH --account=nwq@v100
+#SBATCH --account=nwq@a100
 
 module purge
-uv run --no-sync -m scripts.run_benchmark \
-    algorithm@algs.a1=ippo \
-    +algorithm@algs.a2=mappo \
-    task@tasks.t1=pettingzoo/multiwalker \
-    +task@tasks.t2=multiwalker/shared \
+uv run --no-sync -m scripts.run_experiment \
+    algorithm=ippo \
+    task=pettingzoo/multiwalker \
+    model=layers/mlp \
     train=true \
     plot=false \
     interactive=false \
