@@ -34,4 +34,5 @@ uv run --no-sync -m scripts.run_benchmark \
     experiment.on_policy_collected_frames_per_batch=5_000 \
     experiment.on_policy_n_minibatch_iters=10 \
     experiment.on_policy_n_envs_per_worker=10 \
+    \
     experiment.evaluation_interval=50_000
