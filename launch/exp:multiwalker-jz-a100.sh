@@ -5,9 +5,9 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --gpus=1
 #SBATCH -C a100
-#SBATCH --cpus-per-task=8
+#SBATCH --cpus-per-task=4
 #SBATCH --time=20:00:00
-#SBATCH --mail-type=ALL
+#SBATCH --mail-type=FAIL
 #SBATCH --output=results/slurm/%x-%j.out
 #SBATCH --error=results/slurm/%x-%j.err
 #SBATCH --account=nwq@a100
@@ -25,11 +25,16 @@ uv run --no-sync -m scripts.run_experiment \
     experiment.collect_with_grad=true \
     experiment.parallel_collection=true \
     \
-    experiment.max_n_frames=500_000 \
-    experiment.lr=0.00005 \
+    experiment.max_n_frames=10_000_000 \
+    experiment.lr=0.001 \
     \
-    experiment.on_policy_collected_frames_per_batch=5_000 \
-    experiment.on_policy_n_minibatch_iters=10 \
+    experiment.on_policy_collected_frames_per_batch=200_000 \
     experiment.on_policy_n_envs_per_worker=10 \
+    experiment.on_policy_n_minibatch_iters=50 \
+    experiment.on_policy_minibatch_size=100_000 \
     \
-    experiment.evaluation_interval=50_000
+    experiment.evaluation_interval=1_000_000 \
+    experiment.evaluation_episodes=5 \
+    experiment.restore_file=null \
+    experiment.checkpoint_at_end=true \
+    experiment.checkpoint_interval=1_000_000
