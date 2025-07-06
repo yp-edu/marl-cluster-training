@@ -7,7 +7,7 @@
 #SBATCH -C v100-16g
 #SBATCH --cpus-per-task=10
 #SBATCH --time=20:00:00
-#SBATCH --mail-type=ALL
+#SBATCH --mail-type=FAIL
 #SBATCH --output=results/slurm/%x-%j.out
 #SBATCH --error=results/slurm/%x-%j.err
 #SBATCH --account=nwq@v100

@@ -6,7 +6,7 @@
 #SBATCH --mem=100G
 #SBATCH --gpus-per-node=a100_7g.80gb:1
 #SBATCH --time=20:00:00
-#SBATCH --mail-type=ALL
+#SBATCH --mail-type=FAIL
 #SBATCH --output=results/slurm/%x-%j.out
 #SBATCH --error=results/slurm/%x-%j.err
 
