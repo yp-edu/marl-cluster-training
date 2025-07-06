@@ -8,6 +8,7 @@ uv run -m scripts.run_experiment \
     algorithm=ippo \
     task=multiwalker/shared \
     experiment=debug_no_log \
+    experiment.on_policy_n_envs_per_worker=1 \
     model=layers/mlp
 ```
 """
@@ -31,6 +32,7 @@ def main(cfg: DictConfig):
     logger.info(f"Algorithm: {algorithm_name}, Task: {task_name}")
 
     experiment = load_experiment(cfg)
+    logger.info(f"Folder name: {experiment.folder_name}")
 
     if cfg.clean_folder:
         make_clean_folder(experiment.config.save_folder)
