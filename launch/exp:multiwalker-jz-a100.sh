@@ -4,6 +4,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --gpus=1
+#SBATCH --qos=qos_gpu-t3
 #SBATCH -C a100
 #SBATCH --cpus-per-task=4
 #SBATCH --time=20:00:00
