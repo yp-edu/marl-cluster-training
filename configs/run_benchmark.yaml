@@ -13,6 +13,7 @@ hydra:
     dir: results/hydra/${hydra.job.name}-run/${now:%Y-%m-%d_%H-%M-%S}
 
 experiment:
+  loggers: [wandb]
   save_folder: "results/benchmarks"
   project_name: "marl-cluster-training"
   wandb_extra_kwargs:
