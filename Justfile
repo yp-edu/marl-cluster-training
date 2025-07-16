@@ -1,3 +1,6 @@
+default:
+  @just --choose
+
 install:
 	uv run pre-commit install
 	uv sync
@@ -11,16 +14,21 @@ test-assets:
 tests:
 	uv run pytest tests --cov=src --cov-report=term-missing --cov-fail-under=50 -s -v
 
-wandb-sync:
-	uv run --no-sync wandb sync results/experiments/*/wandb/offline-run-*
-	uv run --no-sync wandb sync results/benchmarks/*/wandb/offline-run-*
-
-wandb-sync-and-clean:
+sync-experiments clean="":
 	for d in results/experiments/*/wandb/offline-run-*; do \
 		uv run wandb sync --sync-all "$$d"; \
-		rm -r "$$d"; \
+		if "{{clean}}" == "clean"; then \
+			rm -r "$$d"; \
+		fi \
 	done
+
+sync-benchmarks clean="":
 	for d in results/benchmarks/*/wandb/offline-run-*; do \
 		uv run wandb sync --sync-all "$$d"; \
-		rm -r "$$d"; \
+		if "{{clean}}" == "clean"; then \
+			rm -r "$$d"; \
+		fi \
 	done
+
+wandb-sync clean="": (sync-experiments "{{clean}}") (sync-benchmarks "{{clean}}")
+	@echo "Done"
